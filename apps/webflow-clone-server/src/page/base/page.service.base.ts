@@ -18,6 +18,8 @@ import {
   Project as PrismaProject,
 } from "@prisma/client";
 
+import { Page } from "./Page";
+
 export class PageServiceBase {
   constructor(protected readonly prisma: PrismaService) {}
 
@@ -58,5 +60,8 @@ export class PageServiceBase {
         where: { id: parentId },
       })
       .project();
+  }
+  async GetUserPages(args: number): Promise<Page[]> {
+    throw new Error("Not implemented");
   }
 }

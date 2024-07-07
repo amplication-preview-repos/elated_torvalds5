@@ -57,6 +57,7 @@ export class UserControllerBase {
         username: true,
         email: true,
         roles: true,
+        role: true,
       },
     });
   }
@@ -86,6 +87,7 @@ export class UserControllerBase {
         username: true,
         email: true,
         roles: true,
+        role: true,
       },
     });
   }
@@ -116,6 +118,7 @@ export class UserControllerBase {
         username: true,
         email: true,
         roles: true,
+        role: true,
       },
     });
     if (result === null) {
@@ -155,6 +158,7 @@ export class UserControllerBase {
           username: true,
           email: true,
           roles: true,
+          role: true,
         },
       });
     } catch (error) {
@@ -193,6 +197,7 @@ export class UserControllerBase {
           username: true,
           email: true,
           roles: true,
+          role: true,
         },
       });
     } catch (error) {

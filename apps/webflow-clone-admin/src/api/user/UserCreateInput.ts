@@ -7,4 +7,5 @@ export type UserCreateInput = {
   email?: string | null;
   password: string;
   roles: InputJsonValue;
+  role?: "Option1" | null;
 };

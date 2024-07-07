@@ -10,4 +10,5 @@ export type UserOrderByInput = {
   email?: SortOrder;
   password?: SortOrder;
   roles?: SortOrder;
+  role?: SortOrder;
 };

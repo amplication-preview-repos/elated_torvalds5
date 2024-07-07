@@ -342,4 +342,21 @@ export class PageControllerBase {
       select: { id: true },
     });
   }
+
+  @common.Get("/user-pages/:userId")
+  @swagger.ApiOkResponse({
+    type: Page,
+  })
+  @swagger.ApiNotFoundResponse({
+    type: errors.NotFoundException,
+  })
+  @swagger.ApiForbiddenResponse({
+    type: errors.ForbiddenException,
+  })
+  async GetUserPages(
+    @common.Body()
+    body: number
+  ): Promise<Page[]> {
+    return this.service.GetUserPages(body);
+  }
 }

@@ -39,13 +39,18 @@ model Element {
 }
 
 model User {
-  id        String   @id @default(cuid())
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  id        String        @id @default(cuid())
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
   firstName String?
   lastName  String?
-  username  String   @unique
-  email     String?  @unique
+  username  String        @unique
+  email     String?       @unique
   password  String
   roles     Json
+  role      EnumUserRole?
+}
+
+enum EnumUserRole {
+  Option1
 }

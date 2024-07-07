@@ -189,4 +189,12 @@ export class PageResolverBase {
     }
     return result;
   }
+
+  @graphql.Query(() => [Page])
+  async GetUserPages(
+    @graphql.Args()
+    args: number
+  ): Promise<Page[]> {
+    return this.service.GetUserPages(args);
+  }
 }
